@@ -106,7 +106,7 @@ const PROJECTS = [
       interest me, including SHA-256 encryption, 12-tone equal temperament, and the
       Mandelbrot set.
     `,
-    link: "https://devpost.com/software/once-upon-a-chat",
+    link: "https://www.gabe.biz/blog/",
   },
 ];
 
@@ -166,7 +166,6 @@ export default function Home() {
               <a href="fdshfdhsj">long-distance cyclist</a>, and (occasional){" "}
               <a href="./blog">blogger</a>.
             </p>
-
             <p className={styles.description}>
               I'm currently looking for Summer 2025 internships, and would love
               to get{" "}
@@ -181,7 +180,6 @@ export default function Home() {
               </a>
               !
             </p>
-
             {/* <p
               className={styles.description}
               style={{ marginTop: 0, marginBottom: 0 }}
@@ -215,60 +213,6 @@ export default function Home() {
               <a href="https://utmist.gitlab.io/">UTMIST</a>. I also have{" "}
               <a href="./blog">a blog</a>.
             </p> */}
-
-            <details>
-              <summary>
-                <span>You can read about my experience here:</span>
-              </summary>
-              <>
-                <p style={{ marginTop: 0, marginLeft: 17, marginBottom: 0 }}>
-                  <i>Internships:</i>
-                </p>
-                <ul>
-                  <li>
-                    Software Engineering Intern @{" "}
-                    <a href="https://www.linkedin.com/company/snorkle/">
-                      Snorkle Labs
-                    </a>{" "}
-                    (May 2024 - present)
-                  </li>
-                  <li>
-                    Reserch Intern @ CUNY Graduate Center (June 2023 - Aug 2023)
-                  </li>
-                </ul>
-                <p style={{ marginLeft: 17, marginBottom: 0 }}>
-                  <i>Clubs Positions:</i>
-                </p>
-                <ul>
-                  <li>
-                    Web Developer and General Council @{" "}
-                    <a href="https://www.cssu.ca/">UofT CSSU</a> (Jun 2024 -
-                    present)
-                  </li>
-                  <li>
-                    Technical Writer @{" "}
-                    <a href="https://utmist.gitlab.io/">UTMIST</a> (Feb 2024 -
-                    present)
-                  </li>
-                  <li>
-                    Lead Full-Stack Developer @{" "}
-                    <a href="http://198.199.123.9/">
-                      Stuyvesant Writing Center
-                    </a>{" "}
-                    (Mar 2022 - Jun 2023)
-                  </li>
-                </ul>
-                <p style={{ marginLeft: 17, marginBottom: 0 }}>
-                  <i>Mentorship:</i>
-                </p>
-                <ul>
-                  <li>
-                    SWE Mentee @ Google Mentorship Program (Feb 2023 - Jun 2023)
-                  </li>
-                </ul>
-              </>
-            </details>
-
             <details>
               <summary>
                 <span>You can check out some of my projects here:</span>
@@ -303,7 +247,77 @@ export default function Home() {
                 </ul>
               </>
             </details>
-
+            <details>
+              <summary>
+                <span>You can read about my experience here:</span>
+              </summary>
+              <>
+                <p style={{ marginTop: 0, marginLeft: 20, marginBottom: 0 }}>
+                  <i>Internships:</i>
+                </p>
+                <ul>
+                  <li>
+                    <span style={{ display: "flex", alignItems: "center" }}>
+                      Software Engineering Intern @
+                      <a href="https://www.linkedin.com/company/snorkle/">
+                        ‎ Snorkle Labs
+                      </a>
+                    </span>
+                  </li>
+                  {/* <li>
+                    <Image
+                      src="/pics/snorkle.jpg"
+                      width="20"
+                      height="20"
+                      style={{
+                        display: "inline-block",
+                        verticalAlign: "center",
+                      }}
+                      alt="hello"
+                    ></Image>
+                    Software Engineering Intern @{" "}
+                    <a href="https://www.linkedin.com/company/snorkle/">
+                      Snorkle Labs
+                    </a>{" "}
+                    (May 2024 - present)
+                  </li> */}
+                  <li>
+                    Research Intern @ CUNY Graduate Center (June 2023 - Aug
+                    2023)
+                  </li>
+                </ul>
+                <p style={{ marginLeft: 17, marginBottom: 0 }}>
+                  <i>Clubs Positions:</i>
+                </p>
+                <ul>
+                  <li>
+                    Web Developer and General Council @{" "}
+                    <a href="https://www.cssu.ca/">UofT CSSU</a> (Jun 2024 -
+                    present)
+                  </li>
+                  <li>
+                    Technical Writer @{" "}
+                    <a href="https://utmist.gitlab.io/">UTMIST</a> (Feb 2024 -
+                    present)
+                  </li>
+                  <li>
+                    Lead Full-Stack Developer @{" "}
+                    <a href="http://198.199.123.9/">
+                      Stuyvesant Writing Center
+                    </a>{" "}
+                    (Mar 2022 - Jun 2023)
+                  </li>
+                </ul>
+                <p style={{ marginLeft: 17, marginBottom: 0 }}>
+                  <i>Mentorship:</i>
+                </p>
+                <ul>
+                  <li>
+                    SWE Mentee @ Google Mentorship Program (Feb 2023 - Jun 2023)
+                  </li>
+                </ul>
+              </>
+            </details>
             <details>
               <summary>
                 <span>You can check out my coursework here:</span>
@@ -332,9 +346,7 @@ export default function Home() {
                 ))}
               </ul>
             </details>
-
             <br />
-
             <details>
               <summary>
                 <span>You can find some of my professional links here:</span>
@@ -357,7 +369,6 @@ export default function Home() {
                 </li>
               </ul>
             </details>
-
             <details>
               <summary>
                 <span>You can find some of my personal links here:</span>
@@ -384,7 +395,6 @@ export default function Home() {
                 </li>
               </ul>
             </details>
-
             <details
               open={isContactOpen}
               onToggle={(e) => {
