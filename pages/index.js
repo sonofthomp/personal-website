@@ -1,124 +1,23 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useRef } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-
-const COURSEWORK = [
-  {
-    code: "CSC110",
-    name: "Foundations of Computer Science I",
-    url: "https://artsci.calendar.utoronto.ca/course/csc110y1",
-    grade: 4.0,
-    session: "2023-24",
-  },
-  {
-    code: "CSC111",
-    name: "Foundations of Computer Science II",
-    url: "https://artsci.calendar.utoronto.ca/course/csc111h1",
-    grade: 4.0,
-    session: "2023-24",
-  },
-  {
-    code: "MAT137",
-    name: "Calculus with Proofs",
-    url: "https://artsci.calendar.utoronto.ca/course/mat137y1",
-    grade: 3.7,
-    session: "2023-24",
-  },
-  {
-    code: "MAT223",
-    name: "Linear Algebra I",
-    url: "https://artsci.calendar.utoronto.ca/course/mat223h1",
-    grade: -1,
-    session: "2023-24",
-  },
-  {
-    code: "VIC172",
-    name: "Physical Sciences Today",
-    url: "https://artsci.calendar.utoronto.ca/course/vic172y1",
-    grade: 4.0,
-    session: "2023-24",
-  },
-  {
-    code: "VIC173",
-    name: "Philosophy of Science for Physical Scientists",
-    url: "https://artsci.calendar.utoronto.ca/course/vic173y1",
-    grade: 4.0,
-    session: "2023-24",
-  },
-];
-
-const PROJECTS = [
-  {
-    name: "PawPoints",
-    imagePath: "/pics/pawpoints.png",
-    description: `
-      _Svelte_, _Google Firebase_, _TypeScript_, and _Tailwind.css_-based website to allow users
-      to track and feed local stray cats. Visuals created with _Mapbox_, project containerized
-      using _Docker_. Won 1st place overall (out of 54 teams) at NewHacks 2023, for which my
-      team was awarded $600.
-    `,
-    link: "https://devpost.com/software/pawpoints",
-  },
-  {
-    name: "Once Upon a Chat",
-    imagePath: "/pics/onceuponachat.jpg",
-    description: `
-      _React.js_, _Next.js_, _Google Firebase_, _TypeScript_, and _Tailwind.css_-based website
-      allowing users to upload WhatsApp group chats and get reports on top messagers and top
-      users (it's kind of like Spotify Wrapped, but for WhatsApp). Authentication and database
-      done with _Google Firebase_, word cloud done with _react-wordcloud_. Created for
-      UofTHacks 2024.
-    `,
-    link: "https://devpost.com/software/once-upon-a-chat",
-  },
-  {
-    name: "Writing Center Website",
-    imagePath: "/pics/writingcenterwebsite.png",
-    description: `
-      _Python Flask_, _SQLite_ and _Bulma.css_-based website I built for my high school's
-      writing center to manage edit requests. Includes authentication system for 300+
-      accounts, editor feedback system, and email notification system to send 2,000+ emails to
-      500+ email addresses. Has been used by 900+ students to complete edit requests. Hosted
-      on DigitalOcean. You can see it in action
-      [here](https://www.youtube.com/watch?v=K8xT3u3Lj24) and
-      [here](https://www.youtube.com/watch?v=4iq2oe5fs0g).
-    `,
-    link: "http://198.199.123.9/",
-  },
-  {
-    name: "Layover Calculator",
-    imagePath: "/pics/layovercalculator.png",
-    description: `
-      _Python Flask_, _SQL_, _Bootstrap_, and _Yelp API_-based website allowing users to find
-      local activities (restaurants, hotels, and other business) near airports during
-      layovers. Includes an account system, and allows users to upvote/downvote attractions.
-      Built for my high school Software Development class.
-    `,
-    link: "https://github.com/SNirloy/p1_api/tree/main",
-  },
-  {
-    name: "Personal Blog",
-    imagePath: "/pics/blog.png",
-    description: `
-      My personal blog. I've written several posts about CS & math-related topics that
-      interest me, including SHA-256 encryption, 12-tone equal temperament, and the
-      Mandelbrot set.
-    `,
-    link: "https://www.gabe.biz/blog/",
-  },
-];
+import Experience from "./components/Experience.js";
+import EXPERIENCES from "./data/Experiences.js";
+import COURSEWORK from "./data/Coursework.js";
+import PROJECTS from "./data/Projects.js";
 
 export default function Home() {
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [isProjectsOpen, setIsProjectsOpen] = useState(false);
+  const contactRef = useRef(null);
+  const fullStackRef = useRef(null);
 
-  function applyStyling(html) {
+  function applyStyling(strHTML, bgColor = "rgb(219, 235, 242)") {
     const italicized = /_(.*?)_/g;
-    let result = html.replace(
+    let result = strHTML.replace(
       italicized,
-      (match, p1) =>
-        `<b style="background-color: rgb(219, 235, 242);">${p1}</b>`
+      (match, p1) => `<b style="background-color: ${bgColor};">${p1}</b>`
     );
 
     const linkified = /\[([^\]]+)\]\(([^)]+)\)/g;
@@ -138,33 +37,30 @@ export default function Home() {
         <main className={styles.main}>
           <br />
           <br />
-          <br />
-          {/* <div className="row">
-            <div className={styles.leftNavBar + "col-sm-3"}>
-              <p>Hello</p>
-            </div>
-            <div className="col-sm-9">
-              <p>Hello</p>
-            </div>
-          </div> */}
           <div className={styles.headerContainer}>
             <h1 className={styles.title}>Hi, I'm Gabriel Thompson.</h1>
           </div>
-          {/* <Image
-            className={styles.picOfMe}
-            style={{ marginLeft: "auto" }}
-            src="/me.png"
-            width={100}
-            height={100}
-          /> */}
           <div>
             <p className={styles.description}>
               I'm rising second-year Computer Science student at the University
               of Toronto, originally from New York City. I'm a{" "}
-              <a href="sdffds">full-stack web developer</a>,{" "}
-              <a href="dfshfshjd">music theory nerd</a>,{" "}
-              <a href="fdshfdhsj">long-distance cyclist</a>, and (occasional){" "}
-              <a href="./blog">blogger</a>.
+              <a
+                style={{ color: "rgb(1, 0, 228)" }}
+                onClick={() => {
+                  setIsProjectsOpen(true);
+                  setTimeout(
+                    () =>
+                      fullStackRef.current.scrollIntoView({
+                        behavior: "smooth",
+                      }),
+                    100
+                  );
+                }}
+              >
+                full-stack web developer
+              </a>
+              , music theory nerd, long-distance cyclist, and{" "}
+              <a href="https://www.gabe.biz/blog">(occasional) blogger</a>.
             </p>
             <p className={styles.description}>
               I'm currently looking for Summer 2025 internships, and would love
@@ -173,47 +69,79 @@ export default function Home() {
                 style={{ color: "rgb(1, 0, 228)" }}
                 onClick={() => {
                   setIsContactOpen(true);
-                  console.log(isContactOpen);
+                  contactRef.current.scrollIntoView({ behavior: "smooth" });
                 }}
               >
                 in touch
               </a>
-              !
+              ! You can find my resume <a href="./resume.pdf">here</a>.
             </p>
-            {/* <p
-              className={styles.description}
-              style={{ marginTop: 0, marginBottom: 0 }}
-            >
-              Currently, I'm:
-            </p>
-            <ul>
-              <li>
-                <p>Working as a Software Engineering Intern @ Snorkle Labs</p>
-              </li>
-              <li>
-                <p>A General Council Member and Web Developer @ UofT's CSSU</p>
-              </li>
-              <li>
-                <p>
-                  A Technical Writer at{" "}
-                  <a href="https://utmist.gitlab.io/">UTMIST</a>
-                </p>
-              </li>
-            </ul> */}
-            {/* <p style={{ marginTop: 0 }}>
-              Currently, I'm working as a Software Engineering Intern @{" "}
-              <a href="https://www.linkedin.com/company/snorkle/">
-                Snorkle Labs
-              </a>
-              . Previously, I created the Stuyvesant Writing Center website and
-              was a Research Intern at CUNY Graduate Center. I'm currently a
-              General Council member and web developer at UofT's{" "}
-              <a href="https://www.cssu.ca/">Computer Science Student Union</a>,
-              and a Technical Writer at{" "}
-              <a href="https://utmist.gitlab.io/">UTMIST</a>. I also have{" "}
-              <a href="./blog">a blog</a>.
-            </p> */}
             <details>
+              <summary>
+                <span>You can read about my experience here:</span>
+              </summary>
+              <>
+                <ul>
+                  <li>
+                    <p style={{ marginTop: 0, marginLeft: 0, marginBottom: 0 }}>
+                      <span className={styles.highlightedText}>
+                        Internships
+                      </span>
+                    </p>
+                  </li>
+                  <ul>
+                    {EXPERIENCES.map((experienceDetails) =>
+                      experienceDetails.experienceType == "internship" ? (
+                        <Experience
+                          details={experienceDetails}
+                          applyStyling={applyStyling}
+                        />
+                      ) : null
+                    )}
+                  </ul>
+                  <li>
+                    <p style={{ marginTop: 0, marginLeft: 0, marginBottom: 0 }}>
+                      <span className={styles.highlightedText}>
+                        Club Positions
+                      </span>
+                    </p>
+                  </li>
+                  <ul>
+                    {EXPERIENCES.map((experienceDetails) =>
+                      experienceDetails.experienceType == "club" ? (
+                        <Experience
+                          details={experienceDetails}
+                          applyStyling={applyStyling}
+                        />
+                      ) : null
+                    )}
+                  </ul>
+                  <li>
+                    <p style={{ marginTop: 0, marginLeft: 0, marginBottom: 0 }}>
+                      <span className={styles.highlightedText}>Mentorship</span>
+                    </p>
+                  </li>
+                  <ul>
+                    {EXPERIENCES.map((experienceDetails) =>
+                      experienceDetails.experienceType == "mentorship" ? (
+                        <Experience
+                          details={experienceDetails}
+                          applyStyling={applyStyling}
+                        />
+                      ) : null
+                    )}
+                  </ul>
+                </ul>
+              </>
+            </details>
+            <details
+              ref={fullStackRef}
+              open={isProjectsOpen}
+              onToggle={(e) => {
+                setIsProjectsOpen(e.target.open);
+                console.log(e.target.open);
+              }}
+            >
               <summary>
                 <span>You can check out some of my projects here:</span>
               </summary>
@@ -244,77 +172,6 @@ export default function Home() {
                       </a>
                     </li>
                   ))}
-                </ul>
-              </>
-            </details>
-            <details>
-              <summary>
-                <span>You can read about my experience here:</span>
-              </summary>
-              <>
-                <p style={{ marginTop: 0, marginLeft: 20, marginBottom: 0 }}>
-                  <i>Internships:</i>
-                </p>
-                <ul>
-                  <li>
-                    <span style={{ display: "flex", alignItems: "center" }}>
-                      Software Engineering Intern @
-                      <a href="https://www.linkedin.com/company/snorkle/">
-                        ‎ Snorkle Labs
-                      </a>
-                    </span>
-                  </li>
-                  {/* <li>
-                    <Image
-                      src="/pics/snorkle.jpg"
-                      width="20"
-                      height="20"
-                      style={{
-                        display: "inline-block",
-                        verticalAlign: "center",
-                      }}
-                      alt="hello"
-                    ></Image>
-                    Software Engineering Intern @{" "}
-                    <a href="https://www.linkedin.com/company/snorkle/">
-                      Snorkle Labs
-                    </a>{" "}
-                    (May 2024 - present)
-                  </li> */}
-                  <li>
-                    Research Intern @ CUNY Graduate Center (June 2023 - Aug
-                    2023)
-                  </li>
-                </ul>
-                <p style={{ marginLeft: 17, marginBottom: 0 }}>
-                  <i>Clubs Positions:</i>
-                </p>
-                <ul>
-                  <li>
-                    Web Developer and General Council @{" "}
-                    <a href="https://www.cssu.ca/">UofT CSSU</a> (Jun 2024 -
-                    present)
-                  </li>
-                  <li>
-                    Technical Writer @{" "}
-                    <a href="https://utmist.gitlab.io/">UTMIST</a> (Feb 2024 -
-                    present)
-                  </li>
-                  <li>
-                    Lead Full-Stack Developer @{" "}
-                    <a href="http://198.199.123.9/">
-                      Stuyvesant Writing Center
-                    </a>{" "}
-                    (Mar 2022 - Jun 2023)
-                  </li>
-                </ul>
-                <p style={{ marginLeft: 17, marginBottom: 0 }}>
-                  <i>Mentorship:</i>
-                </p>
-                <ul>
-                  <li>
-                    SWE Mentee @ Google Mentorship Program (Feb 2023 - Jun 2023)
-                  </li>
                 </ul>
               </>
             </details>
@@ -396,6 +253,7 @@ export default function Home() {
               </ul>
             </details>
             <details
+              ref={contactRef}
               open={isContactOpen}
               onToggle={(e) => {
                 setIsContactOpen(e.target.open);

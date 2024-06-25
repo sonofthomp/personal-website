@@ -100,6 +100,12 @@
   height: auto;
 }
 
+.highlightedText {
+  font-weight: 700;
+  font-style: italic;
+  background-color: rgb(219, 235, 242);
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
