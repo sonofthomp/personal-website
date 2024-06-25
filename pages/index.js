@@ -2,16 +2,32 @@ import React, { useState, useRef } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import Experience from "./components/Experience.js";
-import EXPERIENCES from "./data/Experiences.js";
-import COURSEWORK from "./data/Coursework.js";
-import PROJECTS from "./data/Projects.js";
+import Experience from "../components/Experience.js";
+import EXPERIENCES from "../data/Experiences.js";
+import COURSEWORK from "../data/Coursework.js";
+import PROJECTS from "../data/Projects.js";
 
 export default function Home() {
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [isProjectsOpen, setIsProjectsOpen] = useState(false);
+  const [highlightProjects, setHighlightProjects] = useState(false);
+  const [highlightContact, setHighlightContact] = useState(false);
   const contactRef = useRef(null);
   const fullStackRef = useRef(null);
+
+  const handleProjectsClick = () => {
+    setHighlightProjects(true);
+    setTimeout(() => {
+      setHighlightProjects(false);
+    }, 1000);
+  };
+
+  const handleContactClick = () => {
+    setHighlightContact(true);
+    setTimeout(() => {
+      setHighlightContact(false);
+    }, 1000);
+  };
 
   function applyStyling(strHTML, bgColor = "rgb(219, 235, 242)") {
     const italicized = /_(.*?)_/g;
@@ -48,6 +64,7 @@ export default function Home() {
                 style={{ color: "rgb(1, 0, 228)" }}
                 onClick={() => {
                   setIsProjectsOpen(true);
+                  handleProjectsClick();
                   setTimeout(
                     () =>
                       fullStackRef.current.scrollIntoView({
@@ -69,6 +86,7 @@ export default function Home() {
                 style={{ color: "rgb(1, 0, 228)" }}
                 onClick={() => {
                   setIsContactOpen(true);
+                  handleContactClick();
                   contactRef.current.scrollIntoView({ behavior: "smooth" });
                 }}
               >
@@ -143,7 +161,9 @@ export default function Home() {
               }}
             >
               <summary>
-                <span>You can check out some of my projects here:</span>
+                <span className={highlightProjects ? "highlight" : ""}>
+                  You can check out some of my projects here:
+                </span>
               </summary>
               <>
                 <ul>
@@ -261,7 +281,9 @@ export default function Home() {
               }}
             >
               <summary>
-                <span>You can get in touch with me here:</span>
+                <span className={highlightContact ? "highlight" : ""}>
+                  You can get in touch with me here:
+                </span>
               </summary>
               <ul>
                 <li>
@@ -356,6 +378,14 @@ export default function Home() {
 
         summary > span {
           margin-left: 5px;
+        }
+
+        span {
+          transition: background-color 0.5s ease;
+        }
+
+        .highlight {
+          background-color: rgb(238, 239, 139;
         }
       `}</style>
     </div>
