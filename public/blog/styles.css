@@ -1,0 +1,46 @@
+div {
+        float: left;
+}
+
+.show {
+        box-shadow: 15px 15px 1px 1px #f00;
+        outline: 5px solid black;
+}
+
+.content {
+        margin-left: 20px;
+	margin-right: 20px;
+}
+
+#sidebar {
+        width: 20vw;
+        margin-left: 10vw;
+        position: fixed;
+        margin-top: 8vh;
+}
+
+#entries {
+        width: 50vw;
+        margin-left: 30vw;
+}
+
+h1, h2, h3, h4 {
+        font-family: 'Verdana', sans-serif;
+}
+
+p, ol, ul, li {
+        font-family: 'Arial', serif;
+}
+
+li {
+	font-size: 14px;
+}
+
+#title {
+        text-shadow: 3px 3px #f1ff00;
+        text-align:center;
+        padding-right:15px;
+        font-family: 'Arial', serif;
+}
+
+li { font-family: 'Merriweather', serif; font-size: 12px }
