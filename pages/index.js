@@ -58,8 +58,8 @@ export default function Home() {
           </div>
           <div>
             <p className={styles.description}>
-              I'm rising second-year Computer Science student at the University
-              of Toronto, originally from New York City. I'm a{" "}
+              I'm a rising second-year Computer Science student at the
+              University of Toronto, originally from New York City. I'm a{" "}
               <a
                 style={{ color: "rgb(1, 0, 228)" }}
                 onClick={() => {
@@ -346,9 +346,6 @@ export default function Home() {
           background-color: white;
           padding: 0;
           margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
         }
         * {
           box-sizing: border-box;
