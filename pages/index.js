@@ -77,7 +77,10 @@ export default function Home() {
                 full-stack web developer
               </a>
               , music theory nerd, long-distance cyclist, and{" "}
-              <a href="https://www.gabe.biz/blog">(occasional) blogger</a>.
+              <a href="https://www.gabe.biz/blog/index.html">
+                (occasional) blogger
+              </a>
+              .
             </p>
             <p className={styles.description}>
               I'm currently looking for Summer 2025 internships, and would love
@@ -230,7 +233,7 @@ export default function Home() {
               </summary>
               <ul>
                 <li>
-                  <a href="https://www.gabe.biz/blog">Blog</a>
+                  <a href="https://www.gabe.biz/blog/index.html">Blog</a>
                 </li>
                 <li>
                   <a href="./resume.pdf">Resume</a>
