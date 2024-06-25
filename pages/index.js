@@ -252,7 +252,9 @@ export default function Home() {
               </summary>
               <ul>
                 <li>
-                  <a href="https://www.gabe.biz/blog">Threads</a>
+                  <a href="https://www.threads.net/@thabriel.ghompson">
+                    Threads
+                  </a>
                 </li>
                 <li>
                   <a href="https://www.last.fm/user/sonofthomp">Last.fm</a>
@@ -282,7 +284,7 @@ export default function Home() {
             >
               <summary>
                 <span className={highlightContact ? "highlight" : ""}>
-                  You can get in touch with me here:
+                  You can contact me here:
                 </span>
               </summary>
               <ul>
