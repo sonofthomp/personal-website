@@ -31,10 +31,7 @@ export default function Experience(params) {
             <li>
               <span
                 dangerouslySetInnerHTML={{
-                  __html: params.applyStyling(
-                    bullet,
-                    "rgb(238, 239, 139, 0.7)"
-                  ),
+                  __html: params.applyStyling(bullet, "white"),
                 }}
               />
             </li>

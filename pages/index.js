@@ -385,7 +385,7 @@ export default function Home() {
         }
 
         .highlight {
-          background-color: rgb(238, 239, 139;
+          background-color: rgb(238, 239, 139);
         }
       `}</style>
     </div>
