@@ -55,7 +55,7 @@ const PROJECTS = [
         interest me, including SHA-256 encryption, 12-tone equal temperament, and the
         Mandelbrot set.
       `,
-    link: "https://www.gabe.biz/blog/",
+    link: "https://www.gabe.biz/blog/index.html",
   },
 ];
 
