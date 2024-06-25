@@ -11,18 +11,6 @@ const PROJECTS = [
     link: "https://devpost.com/software/pawpoints",
   },
   {
-    name: "Once Upon a Chat",
-    imagePath: "/pics/onceuponachat.jpg",
-    description: `
-        _React.js_, _Next.js_, _Google Firebase_, _TypeScript_, and _Tailwind.css_-based website
-        allowing users to upload WhatsApp group chats and get reports on top messagers and top
-        users (it's kind of like Spotify Wrapped, but for WhatsApp). Authentication and database
-        done with _Google Firebase_, word cloud done with _react-wordcloud_. Created for
-        UofTHacks 2024.
-      `,
-    link: "https://devpost.com/software/once-upon-a-chat",
-  },
-  {
     name: "Writing Center Website",
     imagePath: "/pics/writingcenterwebsite.png",
     description: `
@@ -35,6 +23,31 @@ const PROJECTS = [
         [here](https://www.youtube.com/watch?v=4iq2oe5fs0g).
       `,
     link: "http://198.199.123.9/",
+  },
+  {
+    name: "Once Upon a Chat",
+    imagePath: "/pics/onceuponachat.jpg",
+    description: `
+        _React.js_, _Next.js_, _Google Firebase_, _TypeScript_, and _Tailwind.css_-based website
+        allowing users to upload WhatsApp group chats and get reports on top messagers and top
+        users (it's kind of like Spotify Wrapped, but for WhatsApp). Authentication and database
+        done with _Google Firebase_, word cloud done with _react-wordcloud_. Created for
+        UofTHacks 2024.
+      `,
+    link: "https://devpost.com/software/once-upon-a-chat",
+  },
+  {
+    name: "MIDI Vocal Harmonizer",
+    imagePath: "/pics/harmonizer.png",
+    description: `
+      A _Python_ tool for auto-tuning vocals to multi-voice MIDI arrangements using the [PSOLA
+      algorithm](https://en.wikipedia.org/wiki/PSOLA) (allowing any user to simulate a choir
+      of themselves, given a recording of them singing and a MIDI file of the corresponding
+      sheet music). Built with _Librosa_, _NumPy_, and _Jupyter Notebook_. You can check out
+      demos [here](https://drive.google.com/file/d/1iUiS8SRIryN8G8qwq9o78cquQxJUPypE/view?usp=drive_link)
+      and [here](https://drive.google.com/file/d/1KdWddgADgaVQdM9znTTMILs2XiYXQube/view?usp=sharing).
+    `,
+    link: "https://github.com/sonofthomp/midi-harmonizer",
   },
   {
     name: "Layover Calculator",
