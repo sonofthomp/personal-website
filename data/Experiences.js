@@ -7,9 +7,10 @@ const EXPERIENCES = [
     startDate: "May 2024",
     endDate: "present",
     bullets: [
-      "Working on _GPT_-based feature to generate explanatory science presentations on the human anatomy from a given prompt.",
-      "Created feature to find any of _250+_ matching mesh IDs in human anatomy model to any of _6,500+_ FMA codes in the human body, by recursively searching children and ancestors of FMA codes using OLS4 API.",
-      "Front-end of feature written with _React.js_ & _Bootstrap_, back-end written in _Python_, accessed via _AWS Lambda_ & _API Gateway_.",
+      "Working at NIH-funded start-up on feature to generate explanatory science presentations on the human anatomy from a given prompt.",
+      "Built _Python_ pipeline to match natural language body part names to _4,000+_ mesh IDs in _10+_ GLB medical models.",
+      "Wrote script to pre-process medical models, assigning codes from the FMA ontology to each mesh ID. Created matching algorithm, which works by finding FMA code of body part name, then _recursively_ searching children and ancestors of that code using OLS4 API to finds a mesh ID with a matching FMA code.",
+      "Built _React_ & _Bootstrap_-based feature for users to generate anatomical presentations with _GPT-4_ and view them. Includes ability to edit & save presentations to user account via _AWS Lambda_ function accessing _DynamoDB_ table.",
     ],
   },
   {
@@ -33,7 +34,9 @@ const EXPERIENCES = [
     startDate: "Jun 2024",
     endDate: "present",
     bullets: [
-      "Working on _Next.js_-based website for Fall 2024 orientation. More details to come (this project started June 23rd)",
+      "Working on _Next.js_-based website for Fall 2024 orientation to be used by _400+_ students, in which users can scan QR codes (updated every 15 seconds) at orientation booths to log their attendance.",
+      "Wrote protocol for generating and validating QR codes using _HMAC encryption_, built _API_ for sending QR codes from server to client. Built _Tailwind.css_ frontend for website for orientation leaders and students, backend in _PostgreSQL_ accessed via _Prisma_.",
+      "Working on re-design of the Arts and Science Student Union's website, using _Next.js_, _Radix UI_ and _Tailwind.css_.",
     ],
   },
   {
