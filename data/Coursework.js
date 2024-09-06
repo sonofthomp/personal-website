@@ -24,7 +24,7 @@ const COURSEWORK = [
     code: "MAT223",
     name: "Linear Algebra I",
     url: "https://artsci.calendar.utoronto.ca/course/mat223h1",
-    grade: -1,
+    grade: 4.0,
     session: "2023-24",
   },
   {

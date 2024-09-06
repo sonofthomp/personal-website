@@ -58,8 +58,8 @@ export default function Home() {
           </div>
           <div>
             <p className={styles.description}>
-              I'm a rising second-year Computer Science student at the
-              University of Toronto, originally from New York City. I'm a{" "}
+              I'm a second-year Computer Science student at the University
+              of Toronto, originally from New York City. I'm a{" "}
               <a
                 style={{ color: "rgb(1, 0, 228)" }}
                 onClick={() => {
