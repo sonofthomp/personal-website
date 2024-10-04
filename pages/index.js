@@ -58,8 +58,8 @@ export default function Home() {
           </div>
           <div>
             <p className={styles.description}>
-              I'm a second-year Computer Science student at the University
-              of Toronto, originally from New York City. I'm a{" "}
+              I'm a second-year Computer Science student at the University of
+              Toronto, originally from New York City. I'm a{" "}
               <a
                 style={{ color: "rgb(1, 0, 228)" }}
                 onClick={() => {
@@ -364,6 +364,22 @@ export default function Home() {
           text-justify: inter-word;
         }
 
+        li {
+          padding-left: 0px;
+        }
+
+        @media only screen and (max-width: 600px) {
+          li {
+            text-align: left;
+          }
+        }
+
+        @media only screen and (min-width: 600px) {
+          li {
+            text-align: justify;
+          }
+        }
+
         li,
         ul {
           margin-top: 0;
@@ -372,6 +388,10 @@ export default function Home() {
         li > p {
           margin-top: 0.15em;
           margin-bottom: 0;
+        }
+
+        ul ul {
+          padding-left: 2vw;
         }
 
         a {

@@ -5,7 +5,7 @@ export default function Experience(params) {
 
   return (
     <li>
-      <span style={{ alignItems: "center", fontWeight: 1000 }}>
+      <span style={{ alignItems: "center", fontWeight: 1000, paddingLeft: 0 }}>
         {params.details.jobTitle} @
         <span style={{ visibility: "hidden" }}>i</span>
         {params.details.employerURL != "" ? (

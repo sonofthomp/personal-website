@@ -5,12 +5,12 @@ const EXPERIENCES = [
     employer: "Snorkle Labs",
     employerURL: "https://www.linkedin.com/company/snorkle/",
     startDate: "May 2024",
-    endDate: "present",
+    endDate: "Aug 2024",
     bullets: [
       "Working at NIH-funded start-up on feature to generate explanatory science presentations on the human anatomy from a given prompt.",
       "Built _Python_ pipeline to match natural language body part names to _4,000+_ mesh IDs in _10+_ GLB medical models.",
       "Wrote script to pre-process medical models, assigning codes from the FMA ontology to each mesh ID. Created matching algorithm, which works by finding FMA code of body part name, then _recursively_ searching children and ancestors of that code using OLS4 API to finds a mesh ID with a matching FMA code.",
-      "Built _React_ & _Bootstrap_-based feature for users to generate anatomical presentations with _GPT-4_ and view them. Includes ability to edit & save presentations to user account via _AWS Lambda_ function accessing _DynamoDB_ table.",
+      "Built _React_ & _Bootstrap_-based feature for users to generate anatomical presentations with _GPT-4_ and view them.",
     ],
   },
   {
