@@ -28,15 +28,16 @@ const EXPERIENCES = [
   },
   {
     experienceType: "club",
-    jobTitle: "Web Developer and General Council",
+    jobTitle: "Web Development Lead",
     employer: "UofT CSSU",
     employerURL: "https://www.cssu.ca/",
     startDate: "Jun 2024",
     endDate: "present",
     bullets: [
-      "Working on _Next.js_-based website for Fall 2024 orientation to be used by _400+_ students, in which users can scan QR codes (updated every 15 seconds) at orientation booths to log their attendance.",
-      "Wrote protocol for generating and validating QR codes using _HMAC encryption_, built _API_ for sending QR codes from server to client. Built _Tailwind.css_ frontend for website for orientation leaders and students, backend in _PostgreSQL_ accessed via _Prisma_.",
-      "Working on re-design of the Arts and Science Student Union's website, using _Next.js_, _Radix UI_ and _Tailwind.css_.",
+      "Co-built _Next.js_ and _TypeScript_-based site for _400+_ students at Fall 2024 orientation and other CSSU events, with which users can scan QR codes (updated every 15 seconds) at orientation booths to log their attendance. [Source code](https://github.com/cssu/orientation-stamp-rally)",
+      "Wrote protocol for generating and validating QR codes using _HMAC encryption_, built _API_ for sending QR codes from server to client. Built _Tailwind_ frontend, backend in _PostgreSQL_. Deployed to _Vercel_. _CI/CD_ in _GitHub Actions_.",
+      "Re-designed hackathon [GenAI Genesis](https://genaigenesis.ca/)'s site with _Next.js_, _Firebase_ and _Tailwind.css_ (for use by _300+_ attendees).",
+      "Promoted to team lead in Oct 2024. One of two leads in team of 14 devs re-designing CSSU site for _5000+_ members.",
     ],
   },
   {

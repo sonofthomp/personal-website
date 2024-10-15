@@ -1,5 +1,16 @@
 const PROJECTS = [
   {
+    name: "Orientation Website",
+    imagePath: "/pics/orientationwebsite.png",
+    description: `
+      _Next.js_, _TypeScript_, _PostgreSQL_, and _Prisma_-based website for 400+ students at
+      September 2024 orientation and other CSSU events. which users can scan QR codes (updated
+      every 15 seconds) at orientation booths to log their attendance. Hosted on _Vercel_, CI/CD
+      via _GitHub Actions_.
+    `,
+    link: "https://github.com/cssu/orientation-stamp-rally",
+  },
+  {
     name: "PawPoints",
     imagePath: "/pics/pawpoints.png",
     description: `

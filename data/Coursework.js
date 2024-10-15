@@ -41,6 +41,41 @@ const COURSEWORK = [
     grade: 4.0,
     session: "2023-24",
   },
+  {
+    code: "CSC207",
+    name: "Software Design",
+    url: "https://artsci.calendar.utoronto.ca/course/csc207h1",
+    grade: -1,
+    session: "2024-25",
+  },
+  {
+    code: "CSC236",
+    name: "Introduction to the Theory of Computation",
+    url: "https://artsci.calendar.utoronto.ca/course/csc236h1",
+    grade: -1,
+    session: "2024-25",
+  },
+  {
+    code: "MAT235",
+    name: "Multivariable Calculus",
+    url: "https://artsci.calendar.utoronto.ca/course/mat235h1",
+    grade: -1,
+    session: "2024-25",
+  },
+  {
+    code: "PCL200",
+    name: "Drugs & the Brain",
+    url: "https://artsci.calendar.utoronto.ca/course/pcl200h1",
+    grade: -1,
+    session: "2024-25",
+  },
+  {
+    code: "STA237",
+    name: "Probability, Statistics and Data Analysis I",
+    url: "https://artsci.calendar.utoronto.ca/course/sta237h1",
+    grade: -1,
+    session: "2024-25",
+  },
 ];
 
 export default COURSEWORK;
