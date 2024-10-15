@@ -58,7 +58,7 @@ const COURSEWORK = [
   {
     code: "MAT235",
     name: "Multivariable Calculus",
-    url: "https://artsci.calendar.utoronto.ca/course/mat235h1",
+    url: "https://artsci.calendar.utoronto.ca/course/mat235y1",
     grade: -1,
     session: "2024-25",
   },
