@@ -297,7 +297,7 @@ export default function Home() {
                     gabrielezrathompson [at] gmail [dot] com
                   </a>
                 </li>
-                <li>Discord: @thabriel.ghompson</li>
+                <li>Discord: @son.of.mr.green.genes</li>
               </ul>
             </details>
           </div>
