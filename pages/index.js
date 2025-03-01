@@ -83,8 +83,7 @@ export default function Home() {
               .
             </p>
             <p className={styles.description}>
-              I'm currently looking for Summer 2025 internships, and would love
-              to get{" "}
+              You can get in touch with me {" "}
               <a
                 style={{ color: "rgb(1, 0, 228)" }}
                 onClick={() => {
@@ -93,7 +92,7 @@ export default function Home() {
                   contactRef.current.scrollIntoView({ behavior: "smooth" });
                 }}
               >
-                in touch
+                here
               </a>
               ! You can find my resume <a href="./resume.pdf">here</a>.
             </p>
