@@ -1,0 +1,3 @@
+[submodule "public/stuycs-archive"]
+	path = public/stuycs-archive
+	url = https://github.com/sonofthomp/stuycs-archive.git
